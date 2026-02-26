@@ -119,8 +119,8 @@ section{padding:7rem 3.5rem}
 .contact-links{display:flex;flex-direction:column;gap:.2rem;margin-bottom:3rem}
 .clink{display:flex;align-items:center;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--muted2);font-size:.85rem;transition:all .25s}
 .clink:hover{color:var(--accent);padding-right:.6rem}
-.clink-icon{width:28px;height:28px;border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:.68rem;color:var(--accent);font-family:var(--en);transition:all .25s;flex-shrink:0}
-.clink:hover .clink-icon{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.clink-icon{width:24px;height:24px;display:flex;align-items:center;justify-content:center;color:var(--accent2);transition:color .25s;flex-shrink:0}
+.clink:hover .clink-icon{color:var(--accent)}
 .avail{display:flex;align-items:center;gap:.6rem;font-size:.72rem;color:var(--muted);font-family:var(--en);letter-spacing:.08em}
 .avail-dot{width:6px;height:6px;background:#4caf50;border-radius:50%;animation:blink 2s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
@@ -291,9 +291,10 @@ footer p{font-size:.72rem;color:var(--muted)}
     <div>
       <p class="contact-intro" id="contactIntro">برای همکاری، استعلام قیمت یا هر سوالی در ارتباط باشید. معمولاً ظرف ۲۴ ساعت پاسخ میدم.</p>
       <div class="contact-links">
-        <a href="mailto:pedinamvar@gmail.com" class="clink"><span class="clink-icon">@</span>pedinamvar@gmail.com</a>
-        <a href="https://instagram.com/editor_tadvingar" target="_blank" class="clink"><span class="clink-icon">IG</span>@editor_tadvingar</a>
-        <a href="https://linkedin.com/in/namvarpedram" target="_blank" class="clink"><span class="clink-icon">LI</span>linkedin.com/in/namvarpedram</a>
+        <a href="/cdn-cgi/l/email-protection#40302524292e212d36213200272d21292c6e232f2d" class="clink"><span class="clink-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg></span><span class="__cf_email__" data-cfemail="d6a6b3b2bfb8b7bba0b7a496b1bbb7bfbaf8b5b9bb">[email&#160;protected]</span></a>
+        <a href="https://instagram.com/editor_tadvingar" target="_blank" class="clink"><span class="clink-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>@editor_tadvingar</a>
+        <a href="https://linkedin.com/in/namvarpedram" target="_blank" class="clink"><span class="clink-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.98 0H13v2.18h.07C13.8 8.67 15.5 7.7 17.5 7.7c4.98 0 5.9 3.28 5.9 7.54V24h-5v-7.82c0-1.87-.03-4.27-2.6-4.27-2.6 0-3 2.03-3 4.13V24H8V8z"/></svg></span>linkedin.com/in/namvarpedram</a>
+        <a href="https://t.me/pedramnamvaredit" target="_blank" class="clink"><span class="clink-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.19 13.33l-2.965-.924c-.644-.204-.657-.644.136-.953l11.57-4.461c.537-.194 1.006.131.963.229z"/></svg></span>@pedramnamvaredit</a>
       </div>
       <div class="avail"><span class="avail-dot"></span><span id="availTxt">Available for new projects</span></div>
     </div>
@@ -325,7 +326,7 @@ footer p{font-size:.72rem;color:var(--muted)}
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // CARD REVEAL
 var cardObs = new IntersectionObserver(function(entries) {
   entries.forEach(function(e, i) {
@@ -446,9 +447,4 @@ function toggleLang() {
 
   document.getElementById('contactIntro').textContent = isEn
     ? 'Available for collaborations, quotes, or any questions. I typically respond within 24 hours.'
-    : 'برای همکاری، استعلام قیمت یا هر سوالی در ارتباط باشید. معمولاً ظرف ۲۴ ساعت پاسخ میدم.';
-  document.getElementById('submitTxt').textContent = isEn ? 'Send Message' : 'ارسال پیام';
-}
-</script>
-</body>
-</html>
+    : 'برای همکاری، استعلام 
