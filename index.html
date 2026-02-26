@@ -360,12 +360,24 @@ function runCounters() {
     tick();
   });
 }
-var statObs = new IntersectionObserver(function(entries) {
-  entries.forEach(function(e) {
-    if (e.isIntersecting) runCounters();
-  });
-}, { threshold: 0.1 });
-statObs.observe(document.querySelector('.stats-grid'));
+// Run on scroll - simple fallback that always works
+window.addEventListener('scroll', function() {
+  var sg = document.querySelector('.stats-grid');
+  if (!sg) return;
+  var rect = sg.getBoundingClientRect();
+  if (rect.top < window.innerHeight && rect.bottom > 0) {
+    runCounters();
+  }
+});
+// Also try after page load with delay
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    var sg = document.querySelector('.stats-grid');
+    if (!sg) return;
+    var rect = sg.getBoundingClientRect();
+    if (rect.top < window.innerHeight) runCounters();
+  }, 500);
+});
 
 // FILTER
 document.querySelectorAll('.fbtn').forEach(function(btn) {
